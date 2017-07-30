@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "[rust] Cobain Rocket RESTful API",
+		"_postman_id": "3e5ca2f6-b908-af8b-2be6-aeea4b7b0e1e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/user",
+			"request": {
+				"url": "{{base_url}}/user/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get all users"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/user/<id>",
+			"request": {
+				"url": "{{base_url}}/user/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get user by id"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/user",
+			"request": {
+				"url": "{{base_url}}/user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"test@mail.com\",\n  \"name\": \"Tester\",\n  \"active\": true\n}"
+				},
+				"description": "Add new user"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/user/<id>",
+			"request": {
+				"url": "{{base_url}}/user/12",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Tester updated\",\n  \"email\": \"tester.updated@mail.com\",\n  \"active\": false\n}"
+				},
+				"description": "Update user by id"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/user/<id>",
+			"request": {
+				"url": "{{base_url}}/user/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": "Delete user by id"
+			},
+			"response": []
+		}
+	]
+}
