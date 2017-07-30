@@ -1,0 +1,13 @@
+[package]
+name = "hello-rocket"
+version = "0.1.0"
+authors = ["Muhammad Syifa <emsifa@gmail.com>"]
+
+[dependencies]
+rocket = "0.3.0"
+rocket_codegen = "0.3.0"
+rocket_contrib = "0.3.0"
+lazy_static = "0.2"
+serde = "1.0"
+serde_json = "1.0"
+serde_derive = "1.0"
