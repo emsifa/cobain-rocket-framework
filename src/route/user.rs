@@ -45,7 +45,7 @@ pub fn put(id: u32, user_data: Json<UserData>) -> Json<Value> {
         "message": "User not found."
       })) 
     },
-    Some(user) => {
+    Some(_) => {
       let mut updated_user = User::new(&user_data.email, &user_data.name, user_data.active);
       repository::user::update_by_id(id, &mut updated_user);
       Json(json!({
@@ -66,7 +66,7 @@ pub fn delete(id: u32) -> Json<Value> {
         "message": "User not found."
       })) 
     },
-    Some(user) => {
+    Some(_) => {
       repository::user::delete_by_id(id);
       Json(json!({
         "status": "ok",

@@ -38,7 +38,7 @@ pub fn find_by_id(id: u32) -> Option<User> {
   let users = USERS.lock().unwrap();
   let result = users.get(&id);
   match result {
-      Some(Option) => Some(result.unwrap().clone()),
+      Some(user) => Some(user.clone()),
       None => None,
   }
 }
